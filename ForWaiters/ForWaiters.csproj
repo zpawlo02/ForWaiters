@@ -62,6 +62,7 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Table.cs" />
+    <Compile Include="Models\Dish.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
