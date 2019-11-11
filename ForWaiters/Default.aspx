@@ -15,12 +15,12 @@
       <br>          
     <div id="leftThing" style="float: left; width:25%;margin-top:3%;  margin-left:23% ">
         <asp:ListBox runat="server" ID="lblMultiSelectOfDishes" SelectionMode="multiple" Font-Size="15pt" Width="330" Height="160" >
-            <asp:ListItem Text="Pierogi ruskie - 14.00zł" Value="1" />
-            <asp:ListItem Text="Zupa pomidorowa - 7.00zł" Value="2" />
-            <asp:ListItem Text="Zapiekanka z pieczarkami - 6.00zł" Value="3" />
-            <asp:ListItem Text="Lody czekoladowe - 9.00zł" Value="4" />
-            <asp:ListItem Text="Szarlotka - 12.00zł" Value="5" />
-            <asp:ListItem Text="Sok pomarańczowy - 5.00zł" Value="6" />
+            <asp:ListItem Text="Pierogi ruskie - 14.00zł" Value="0" />
+            <asp:ListItem Text="Zupa pomidorowa - 7.00zł" Value="1" />
+            <asp:ListItem Text="Zapiekanka z pieczarkami - 6.00zł" Value="2" />
+            <asp:ListItem Text="Lody czekoladowe - 9.00zł" Value="3" />
+            <asp:ListItem Text="Szarlotka - 12.00zł" Value="4" />
+            <asp:ListItem Text="Sok pomarańczowy - 5.00zł" Value="5" />
                         
         </asp:ListBox>
     </div>
@@ -40,6 +40,7 @@
         <br>
                     <asp:TextBox id="txtBoxQuantitySok"runat="server" type="number" Width="30" Height="18"></asp:TextBox>
         <br>
+                    
     </div>
                 
      <div id="content" style="float: left; width:5%;  ">
@@ -62,11 +63,11 @@
                 
     <div id="content" style="float: left; width:15%;margin-top:3% ">
         <asp:ListBox runat="server" ID="lblMultiSelectOfTables" SelectionMode="multiple" Font-Size="16pt" Width="130" Height="160" >
-            <asp:ListItem Text="Stolik nr 1" Value="1" />
-            <asp:ListItem Text="Stolik nr 2" Value="2" />
-            <asp:ListItem Text="Stolik nr 3" Value="3" />
-            <asp:ListItem Text="Stolik nr 4" Value="4" />
-            <asp:ListItem Text="Stolik nr 5" Value="5" />
+            <asp:ListItem Text="Stolik nr 1" Value="0" />
+            <asp:ListItem Text="Stolik nr 2" Value="1" />
+            <asp:ListItem Text="Stolik nr 3" Value="2" />
+            <asp:ListItem Text="Stolik nr 4" Value="3" />
+            <asp:ListItem Text="Stolik nr 5" Value="4" />
                         
         </asp:ListBox> 
                     
