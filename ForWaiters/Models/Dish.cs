@@ -73,5 +73,25 @@ namespace ForWaiters.Models
             this.quantity = newQuantity;
             this.priceForFew = this.priceForOne * this.quantity;
         }
+
+        public int getPriceForFew()
+        {
+            return this.priceForOne * quantity;
+        }
+
+        public int getPrice()
+        {
+            return this.priceForOne;
+        }
+
+        public int getQuantity()
+        {
+            return this.quantity;
+        }
+
+        public string getName()
+        {
+            return this.name;
+        }
     }
 }

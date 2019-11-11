@@ -74,12 +74,20 @@
     </div>
                 <div id="content" style="float: left; width:9%; margin-top:7%  ">
                   
-                    <asp:Button id="btnAddDishes" runat="server" Width="90" Height="80" Text="Dodaj dania" Font-Size="28pt"></asp:Button>
+                    <asp:Button id="btnAddDishes" runat="server" OnClick="addDishesOnButtonClick" Width="90" Height="80" Text="Dodaj dania" Font-Size="28pt"></asp:Button>
        
     </div>    
                 
     <div id="rightThing" style="float: left; width:25%;margin-top:3%;">Right Side Menu</div>
     </div>
+            
+            <div id="content" style="float: left; width:15%;margin-top:20% ">
+        <asp:ListBox runat="server" ID="lblDishesForFirstTable" SelectionMode="multiple"style="overflow-x:auto;" Font-Size="16pt" Width="130" Height="160" >
+                        
+        </asp:ListBox> 
+    </div>
     </form>
+        
+        
 </body>
 </html>

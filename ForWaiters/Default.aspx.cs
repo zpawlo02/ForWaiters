@@ -24,7 +24,8 @@ namespace ForWaiters
                         if (listItem1.Selected) {
 
                             tablesList[int.Parse(listItem.Value)].addDishToTable(quantityOfSlectedDish(listItem1.Value), int.Parse(listItem1.Value));
-
+                            loadDisheshInView(int.Parse(listItem.Value));
+                           
                         }
 
                     }
@@ -37,31 +38,53 @@ namespace ForWaiters
         private int quantityOfSlectedDish(string id)
         {
             int quantitySelected = 1;
-            if (id == "0")
+            try
             {
-                quantitySelected = int.Parse(txtBoxQuantityPierogi.Text);
+                if (id == "0")
+                {
+                    quantitySelected = int.Parse(txtBoxQuantityPierogi.Text);
+                }
+                else if (id == "1")
+                {
+                    quantitySelected = int.Parse(txtBoxQuantityZupa.Text);
+                }
+                else if (id == "2")
+                {
+                    quantitySelected = int.Parse(txtBoxQuantityZapiekanka.Text);
+                }
+                else if (id == "3")
+                {
+                    quantitySelected = int.Parse(txtBoxQuantityLody.Text);
+                }
+                else if (id == "4")
+                {
+                    quantitySelected = int.Parse(txtBoxQuantitySzarlotka.Text);
+                }
+                else if (id == "5")
+                {
+                    quantitySelected = int.Parse(txtBoxQuantitySok.Text);
+                }
             }
-            else if (id == "1")
+            catch
             {
-                quantitySelected = int.Parse(txtBoxQuantityZupa.Text);
+
             }
-            else if (id == "2")
-            {
-                quantitySelected = int.Parse(txtBoxQuantityZapiekanka.Text);
-            }
-            else if (id == "3")
-            {
-                quantitySelected = int.Parse(txtBoxQuantityLody.Text);
-            }
-            else if (id == "4")
-            {
-                quantitySelected = int.Parse(txtBoxQuantitySzarlotka.Text);
-            }
-            else if (id == "5")
-            {
-                quantitySelected = int.Parse(txtBoxQuantitySok.Text);
-            }
+            
             return quantitySelected;
+        }
+
+        public void loadDisheshInView(int indexOfTable)
+        {
+            List<Dish> dishes = new List<Dish>(tablesList[indexOfTable].getDishes());
+
+            if(indexOfTable == 0)
+            {
+                for(int i = 0; i < dishes.Count; i++)
+                {
+                    lblDishesForFirstTable.Items.Add(dishes[i].getQuantity().ToString() + "x" + dishes[i].getName() + " " + dishes[i].getPrice().ToString() + "*" + dishes[i].getQuantity().ToString() + "=" + dishes[i].getPriceForFew().ToString());
+                   
+                }
+            }
         }
     }
 }

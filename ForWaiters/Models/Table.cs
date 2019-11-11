@@ -15,7 +15,10 @@ namespace ForWaiters.Models
 
         public void addDishToTable(int quantity, int id)
         {
-            this.dishes.Add(new Dish(id, quantity));
+            Dish dish = new Dish(id, quantity);
+            this.dishes.Clear();
+            this.dishes.Add(dish);
+            this.billValue += dish.getPriceForFew();
         }
 
         //wybierajac danie z listy pobieram na jakim indeksie jest danie
@@ -30,6 +33,15 @@ namespace ForWaiters.Models
             this.dishes[whichDish].changeQuantity(newQuantity);
         }
 
+        public List<Dish> getDishes()
+        {
+            return this.dishes;
+        }
+
+        public int getBil()
+        {
+            return this.billValue;
+        }
 
     }
 }
