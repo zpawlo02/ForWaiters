@@ -76,18 +76,22 @@ namespace ForWaiters
 
         public void loadDisheshInView(int indexOfTable)
         {
-            List<Dish> dishes = new List<Dish>(tablesList[indexOfTable].getDishes());
-            tablesList[indexOfTable].getDishes().Clear();
 
-            if(indexOfTable == 0)
+            List<Dish> dishes = new List<Dish>(tablesList[indexOfTable].getDishes());
+            
+
+            if (indexOfTable == 0)
             {
-                for(int i = 0; i < dishes.Count; i++)
+                lblDishesForFirstTable.Items.Clear();
+                for (int i = 0; i < dishes.Count; i++)
                 {
+                    
                     lblDishesForFirstTable.Items.Add(dishes[i].getQuantity().ToString() + "x" + dishes[i].getName() + " " + (dishes[i].getPrice() / 100.0f).ToString() + "zł" + "*" + dishes[i].getQuantity().ToString() + "=" + (dishes[i].getPriceForFew() / 100.0f).ToString() + "zł");
                     firstBill.Text = (tablesList[indexOfTable].getBil() / 100.0f).ToString() + "zł";
                 }
             }else if(indexOfTable == 1)
             {
+                lblDishesForSecondTable.Items.Clear();
                 for (int i = 0; i < dishes.Count; i++)
                 {
                     lblDishesForSecondTable.Items.Add(dishes[i].getQuantity().ToString() + "x" + dishes[i].getName() + " " + (dishes[i].getPrice() / 100.0f).ToString() + "zł" + "*" + dishes[i].getQuantity().ToString() + "=" + (dishes[i].getPriceForFew() / 100.0f).ToString() + "zł");
@@ -96,6 +100,7 @@ namespace ForWaiters
             }
             else if (indexOfTable == 2)
             {
+                lblDishesForThirdTable.Items.Clear();
                 for (int i = 0; i < dishes.Count; i++)
                 {
                     lblDishesForThirdTable.Items.Add(dishes[i].getQuantity().ToString() + "x" + dishes[i].getName() + " " + (dishes[i].getPrice() / 100.0f).ToString() + "zł" + "*" + dishes[i].getQuantity().ToString() + "=" + (dishes[i].getPriceForFew() / 100.0f).ToString() + "zł");
@@ -104,6 +109,7 @@ namespace ForWaiters
             }
             else if (indexOfTable == 3)
             {
+                lblDishesForFourthTable.Items.Clear();
                 for (int i = 0; i < dishes.Count; i++)
                 {
                     lblDishesForFourthTable.Items.Add(dishes[i].getQuantity().ToString() + "x" + dishes[i].getName() + " " + (dishes[i].getPrice() / 100.0f).ToString() + "zł" + "*" + dishes[i].getQuantity().ToString() + "=" + (dishes[i].getPriceForFew() / 100.0f).ToString() + "zł");
@@ -112,6 +118,7 @@ namespace ForWaiters
             }
             else if (indexOfTable == 4)
             {
+                lblDishesForFifthTable.Items.Clear();
                 for (int i = 0; i < dishes.Count; i++)
                 {
                     lblDishesForFifthTable.Items.Add(dishes[i].getQuantity().ToString() + "x" + dishes[i].getName() + " " + (dishes[i].getPrice() / 100.0f).ToString() + "zł" + "*" + dishes[i].getQuantity().ToString() + "=" + (dishes[i].getPriceForFew()/ 100.0f).ToString() + "zł");
@@ -130,8 +137,8 @@ namespace ForWaiters
                 if (lblDishesForFirstTable.Items[i].Selected)
                 {
                     itemsToRemove.Add(lblDishesForFirstTable.Items[i]);
-                //    tablesList[0].getDishes().RemoveAt(i-1);
-                   //TODO FIX REMOVING FROM TABLE 
+                    tablesList[0].removeDishAt(i);
+                   
                 }
             }
             foreach (ListItem listItem in itemsToRemove)
@@ -139,7 +146,95 @@ namespace ForWaiters
                 lblDishesForFirstTable.Items.Remove(listItem);
             }
 
+            loadDisheshInView(0);
+
         }
 
+        public void deleteSelectedFromSecondTable(object sender, EventArgs args)
+        {
+            List<ListItem> itemsToRemove = new List<ListItem>();
+
+            for (int i = 0; i < lblDishesForSecondTable.Items.Count; i++)
+            {
+                if (lblDishesForSecondTable.Items[i].Selected)
+                {
+                    itemsToRemove.Add(lblDishesForSecondTable.Items[i]);
+                    tablesList[1].removeDishAt(i);
+
+                }
+            }
+            foreach (ListItem listItem in itemsToRemove)
+            {
+                lblDishesForSecondTable.Items.Remove(listItem);
+            }
+
+            loadDisheshInView(1);
+        }
+
+        public void deleteSelectedFromThirdTable(object sender, EventArgs args)
+        {
+            List<ListItem> itemsToRemove = new List<ListItem>();
+
+            for (int i = 0; i < lblDishesForThirdTable.Items.Count; i++)
+            {
+                if (lblDishesForThirdTable.Items[i].Selected)
+                {
+                    itemsToRemove.Add(lblDishesForThirdTable.Items[i]);
+                    tablesList[2].removeDishAt(i);
+
+                }
+            }
+            foreach (ListItem listItem in itemsToRemove)
+            {
+                lblDishesForThirdTable.Items.Remove(listItem);
+            }
+            loadDisheshInView(2);
+        }
+
+        public void deleteSelectedFromFourthTable(object sender, EventArgs args)
+        {
+            List<ListItem> itemsToRemove = new List<ListItem>();
+
+            for (int i = 0; i < lblDishesForFourthTable.Items.Count; i++)
+            {
+                if (lblDishesForFourthTable.Items[i].Selected)
+                {
+                    itemsToRemove.Add(lblDishesForFourthTable.Items[i]);
+                    tablesList[3].removeDishAt(i);
+                    
+
+                }
+            }
+            foreach (ListItem listItem in itemsToRemove)
+            {
+                lblDishesForFourthTable.Items.Remove(listItem);
+            }
+            loadDisheshInView(3);
+        }
+
+        public void deleteSelectedFromFifthTable(object sender, EventArgs args)
+        {
+            List<ListItem> itemsToRemove = new List<ListItem>();
+
+            for (int i = 0; i < lblDishesForFifthTable.Items.Count; i++)
+            {
+                if (lblDishesForFifthTable.Items[i].Selected)
+                {
+                    itemsToRemove.Add(lblDishesForFifthTable.Items[i]);
+                    tablesList[4].removeDishAt(i);
+
+                }
+            }
+            foreach (ListItem listItem in itemsToRemove)
+            {
+                lblDishesForFifthTable.Items.Remove(listItem);
+            }
+            loadDisheshInView(4);
+        }
+
+        public void changeQuantitySelectedInFirstTable(object sender, EventArgs args)
+        {
+
+        }
     }
 }

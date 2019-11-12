@@ -69,7 +69,6 @@
             <br>
             <asp:TextBox runat="server" id="textBoxChangeQuantityFirst"></asp:TextBox>
             <asp:Button runat="server" id="changeSelectedItemsQuantityFirst" Text="Zmień ilość zaznaczonych dań" ></asp:Button>
-            <asp:Label runat="server" id="test"></asp:Label> 
             <asp:ListBox runat="server" ID="lblDishesForFirstTable" SelectionMode="multiple"style="overflow-x:auto;" Font-Size="13pt" Width="360" Height="300" ></asp:ListBox> 
             <br>
             <asp:label runat="server"> Rachunek: </asp:label>
@@ -79,7 +78,7 @@
             
         <div id="content" style="float: left; width:25%;margin-top:8%; margin-left:15% ">
             <asp:label runat="server"> Stolik 2</asp:label>
-            <asp:Button runat="server" id="deleteSelectedItemsSecond" Text="Usuń zaznaczone dania"></asp:Button>
+            <asp:Button runat="server" id="deleteSelectedItemsSecond" Text="Usuń zaznaczone dania" OnClick="deleteSelectedFromSecondTable"></asp:Button>
             <br>
             <asp:TextBox runat="server" id="textBoxChangeQuantitySecpmd"></asp:TextBox>
             <asp:Button runat="server" id="changeSelectedItemsQuantitySecond" Text="Zmień ilość zaznaczonych dań" ></asp:Button>
@@ -93,7 +92,7 @@
             
         <div id="content" style="float: left; width:25%;margin-top:8%; margin-left:15% ">
             <asp:label runat="server"> Stolik 3</asp:label>
-            <asp:Button runat="server" id="deleteSelectedItemsThird" Text="Usuń zaznaczone dania"></asp:Button>
+            <asp:Button runat="server" id="deleteSelectedItemsThird" Text="Usuń zaznaczone dania" OnClick="deleteSelectedFromThirdTable"></asp:Button>
             <br>
             <asp:TextBox runat="server" id="textBoxChangeQuantityThird"></asp:TextBox>
             <asp:Button runat="server" id="changeSelectedItemsQuantityThird" Text="Zmień ilość zaznaczonych dań" ></asp:Button>
@@ -107,7 +106,7 @@
             
         <div id="content" style="float: left; width:25%;margin-top:8%; margin-left:15% "> 
             <asp:label runat="server"> Stolik 4</asp:label>
-            <asp:Button runat="server" id="deleteSelectedItemsFourth" Text="Usuń zaznaczone dania"></asp:Button>
+            <asp:Button runat="server" id="deleteSelectedItemsFourth" Text="Usuń zaznaczone dania" OnClick="deleteSelectedFromFourthTable"></asp:Button>
             <br>
             <asp:TextBox runat="server" id="textBoxChangeQuantityFourth"></asp:TextBox>
             <asp:Button runat="server" id="changeSelectedItemsQuantityFourth" Text="Zmień ilość zaznaczonych dań" ></asp:Button>
@@ -121,7 +120,7 @@
             
         <div id="content" style="float: left; width:25%;margin-top:8%; margin-left:15% ">
             <asp:label runat="server"> Stolik 5</asp:label>
-            <asp:Button runat="server" id="deleteSelectedItemsFifth" Text="Usuń zaznaczone dania"></asp:Button>
+            <asp:Button runat="server" id="deleteSelectedItemsFifth" Text="Usuń zaznaczone dania" OnClick="deleteSelectedFromFifthTable"></asp:Button>
             <br>
             <asp:TextBox runat="server" id="textBoxChangeQuantityFifth"></asp:TextBox>
             <asp:Button runat="server" id="changeSelectedItemsQuantityFifth" Text="Zmień ilość zaznaczonych dań" ></asp:Button>

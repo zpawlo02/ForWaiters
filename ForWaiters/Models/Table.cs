@@ -15,10 +15,9 @@ namespace ForWaiters.Models
 
         public void addDishToTable(int quantity, int id)
         {
-            Dish dish = new Dish(id, quantity);
-           // this.dishes.Clear();
-            this.dishes.Add(dish);
-            this.billValue += dish.getPriceForFew();
+          
+            this.dishes.Add(new Dish(id, quantity));
+            this.billValue += new Dish(id, quantity).getPriceForFew();
         }
 
         //wybierajac danie z listy pobieram na jakim indeksie jest danie
@@ -41,6 +40,21 @@ namespace ForWaiters.Models
         public float getBil()
         {
             return this.billValue;
+        }
+
+        public void removeDishAt(int index)
+        {
+            if (getDishes().Count == 1)
+            {
+                this.billValue = 0;
+                getDishes().Clear();
+            }
+            else
+            {
+                this.billValue -= getDishes()[index].getPriceForFew();
+                getDishes().RemoveAt(index);
+            }
+            
         }
 
     }

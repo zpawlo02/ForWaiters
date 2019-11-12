@@ -92,6 +92,5 @@ namespace ForWaiters {
 		protected System.Web.UI.WebControls.Button payBillFifth;
 
         protected System.Web.UI.WebControls.Label fifthBill;
-        protected System.Web.UI.WebControls.Label test;
     }
 }
