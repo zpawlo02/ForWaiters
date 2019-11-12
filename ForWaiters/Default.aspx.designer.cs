@@ -30,9 +30,17 @@ namespace ForWaiters {
 		protected System.Web.UI.WebControls.TextBox txtBoxQuantitySok;
 		
 		protected System.Web.UI.WebControls.ListBox lblMultiSelectOfTables;
-
-        protected System.Web.UI.WebControls.ListBox lblDishesForFirstTable;
-
-        protected System.Web.UI.WebControls.Label labelIdd;
-    }
+		
+		protected System.Web.UI.WebControls.Button btnAddDishes;
+		
+		protected System.Web.UI.WebControls.ListBox lblDishesForFirstTable;
+		
+		protected System.Web.UI.WebControls.ListBox lblDishesForSecondTable;
+		
+		protected System.Web.UI.WebControls.ListBox lblDishesForThirdTable;
+		
+		protected System.Web.UI.WebControls.ListBox lblDishesForFourthTable;
+		
+		protected System.Web.UI.WebControls.ListBox lblDishesForFifthTable;
+	}
 }

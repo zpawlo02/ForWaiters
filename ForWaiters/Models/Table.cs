@@ -7,7 +7,7 @@ namespace ForWaiters.Models
     {
         public static int id = id++;
         private List<Dish> dishes = new List<Dish>();
-        private int billValue = 0;
+        private float billValue = 0.0f;
 
         public Table()
         {
@@ -38,7 +38,7 @@ namespace ForWaiters.Models
             return this.dishes;
         }
 
-        public int getBil()
+        public float getBil()
         {
             return this.billValue;
         }

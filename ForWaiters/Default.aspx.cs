@@ -24,12 +24,12 @@ namespace ForWaiters
                         if (listItem1.Selected) {
 
                             tablesList[int.Parse(listItem.Value)].addDishToTable(quantityOfSlectedDish(listItem1.Value), int.Parse(listItem1.Value));
-                            loadDisheshInView(int.Parse(listItem.Value));
+                            
                            
                         }
 
                     }
-                    
+                    loadDisheshInView(int.Parse(listItem.Value));
                 }
             }
             
@@ -81,10 +81,42 @@ namespace ForWaiters
             {
                 for(int i = 0; i < dishes.Count; i++)
                 {
-                    lblDishesForFirstTable.Items.Add(dishes[i].getQuantity().ToString() + "x" + dishes[i].getName() + " " + dishes[i].getPrice().ToString() + "*" + dishes[i].getQuantity().ToString() + "=" + dishes[i].getPriceForFew().ToString());
+                    lblDishesForFirstTable.Items.Add(dishes[i].getQuantity().ToString() + "x" + dishes[i].getName() + " " + (dishes[i].getPrice() / 100.0f).ToString() + "*" + dishes[i].getQuantity().ToString() + "zł" + "=" + (dishes[i].getPriceForFew() / 100.0f).ToString() + "zł");
                    
                 }
+            }else if(indexOfTable == 1)
+            {
+                for (int i = 0; i < dishes.Count; i++)
+                {
+                    lblDishesForSecondTable.Items.Add(dishes[i].getQuantity().ToString() + "x" + dishes[i].getName() + " " + (dishes[i].getPrice() / 100.0f).ToString() + "*" + dishes[i].getQuantity().ToString() + "zł" + "=" + (dishes[i].getPriceForFew() / 100.0f).ToString() + "zł");
+
+                }
             }
+            else if (indexOfTable == 2)
+            {
+                for (int i = 0; i < dishes.Count; i++)
+                {
+                    lblDishesForThirdTable.Items.Add(dishes[i].getQuantity().ToString() + "x" + dishes[i].getName() + " " + (dishes[i].getPrice() / 100.0f).ToString() + "*" + dishes[i].getQuantity().ToString() + "zł" + "=" + (dishes[i].getPriceForFew() / 100.0f).ToString() + "zł");
+
+                }
+            }
+            else if (indexOfTable == 3)
+            {
+                for (int i = 0; i < dishes.Count; i++)
+                {
+                    lblDishesForFourthTable.Items.Add(dishes[i].getQuantity().ToString() + "x" + dishes[i].getName() + " " + (dishes[i].getPrice() / 100.0f).ToString() + "*" + dishes[i].getQuantity().ToString() + "zł" + "=" + (dishes[i].getPriceForFew() / 100.0f).ToString() + "zł");
+
+                }
+            }
+            else if (indexOfTable == 4)
+            {
+                for (int i = 0; i < dishes.Count; i++)
+                {
+                    lblDishesForFifthTable.Items.Add(dishes[i].getQuantity().ToString() + "x" + dishes[i].getName() + " " + dishes[i].getPrice().ToString() + "*" + dishes[i].getQuantity().ToString() + "zł" + "=" + dishes[i].getPriceForFew().ToString() + "zł");
+
+                }
+            }
+
         }
     }
 }
