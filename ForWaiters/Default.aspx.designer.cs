@@ -33,14 +33,65 @@ namespace ForWaiters {
 		
 		protected System.Web.UI.WebControls.Button btnAddDishes;
 		
+		protected System.Web.UI.WebControls.Button deleteSelectedItemsFirst;
+		
+		protected System.Web.UI.WebControls.TextBox textBoxChangeQuantityFirst;
+		
+		protected System.Web.UI.WebControls.Button changeSelectedItemsQuantityFirst;
+		
 		protected System.Web.UI.WebControls.ListBox lblDishesForFirstTable;
+		
+		protected System.Web.UI.WebControls.Button payBillFirst;
+
+        protected System.Web.UI.WebControls.Label firstBill;
+
+        protected System.Web.UI.WebControls.Button deleteSelectedItemsSecond;
+		
+		protected System.Web.UI.WebControls.TextBox textBoxChangeQuantitySecpmd;
+		
+		protected System.Web.UI.WebControls.Button changeSelectedItemsQuantitySecond;
 		
 		protected System.Web.UI.WebControls.ListBox lblDishesForSecondTable;
 		
+		protected System.Web.UI.WebControls.Button payBillSecond;
+
+        protected System.Web.UI.WebControls.Label secondBill;
+
+        protected System.Web.UI.WebControls.Button deleteSelectedItemsThird;
+		
+		protected System.Web.UI.WebControls.TextBox textBoxChangeQuantityThird;
+		
+		protected System.Web.UI.WebControls.Button changeSelectedItemsQuantityThird;
+		
 		protected System.Web.UI.WebControls.ListBox lblDishesForThirdTable;
+		
+		protected System.Web.UI.WebControls.Button payBillThird;
+
+        protected System.Web.UI.WebControls.Label thirdBill;
+
+        protected System.Web.UI.WebControls.Button deleteSelectedItemsFourth;
+		
+		protected System.Web.UI.WebControls.TextBox textBoxChangeQuantityFourth;
+		
+		protected System.Web.UI.WebControls.Button changeSelectedItemsQuantityFourth;
 		
 		protected System.Web.UI.WebControls.ListBox lblDishesForFourthTable;
 		
+		protected System.Web.UI.WebControls.Button payBillFourth;
+
+        protected System.Web.UI.WebControls.Label fourthBill;
+
+        protected System.Web.UI.WebControls.Button deleteSelectedItemsFifth;
+		
+		protected System.Web.UI.WebControls.TextBox textBoxChangeQuantityFifth;
+		
+		protected System.Web.UI.WebControls.Button changeSelectedItemsQuantityFifth;
+		
 		protected System.Web.UI.WebControls.ListBox lblDishesForFifthTable;
-	}
+		
+		protected System.Web.UI.WebControls.Button payBillFifth;
+
+        protected System.Web.UI.WebControls.Label fifthBill;
+        protected System.Web.UI.WebControls.Label test;
+    }
 }

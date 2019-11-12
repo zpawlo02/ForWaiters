@@ -16,7 +16,7 @@ namespace ForWaiters.Models
         public void addDishToTable(int quantity, int id)
         {
             Dish dish = new Dish(id, quantity);
-            this.dishes.Clear();
+           // this.dishes.Clear();
             this.dishes.Add(dish);
             this.billValue += dish.getPriceForFew();
         }
