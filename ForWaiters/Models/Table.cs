@@ -29,7 +29,9 @@ namespace ForWaiters.Models
         //whichDish to indeks dania z listy zamowien
         public void changeQuantityOfDishes(int whichDish, int newQuantity)
         {
+            this.billValue -= dishes[whichDish].getPriceForFew();
             this.dishes[whichDish].changeQuantity(newQuantity);
+            this.billValue += dishes[whichDish].getPriceForFew();
         }
 
         public List<Dish> getDishes()
@@ -48,6 +50,7 @@ namespace ForWaiters.Models
             {
                 this.billValue = 0;
                 getDishes().Clear();
+
             }
             else
             {

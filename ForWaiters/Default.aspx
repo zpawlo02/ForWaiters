@@ -8,9 +8,7 @@
 </head>
 <body>
 	<form id="form1" runat="server">
-    
-	
-    
+  
     <div id="the whole thing" style="height:100%; width:100%; overflow: hidden;">
       <br>          
     <div id="leftThing" style="float: left; width:25%; margin-top:3%;  margin-left:23% ">
@@ -57,31 +55,30 @@
     </div>
                 <div id="content" style="float: left; width:9%; margin-top:7%  ">
                   
-                    <asp:Button id="btnAddDishes" runat="server" OnClick="addDishesOnButtonClick" Width="90" Height="80" Text="Dodaj dania" Font-Size="28pt"></asp:Button>
-       
-    </div>    
+                    <asp:Button id="btnAddDishes" runat="server" OnClick="addDishesOnButtonClick" Text="Dodaj dania" Font-Size="24pt"></asp:Button>
+          
                
     </div>
             
-        <div id="content" style="float: left; width:25%;margin-top:8%; margin-left:15%  ">
+        <div id="content" style="float: left; width:25%;margin-top:3%; margin-left:15%  ">
             <asp:label runat="server"> Stolik 1</asp:label>
-            <asp:Button runat="server" id="deleteSelectedItemsFirst" Text="Usuń zaznaczone dania" OnClick="deleteSelectedFromFirstTable"></asp:Button>
+            <asp:Button runat="server" id="deleteSelectedItemsFirst" Text="Usuń zaznaczone dania" Font-Size="24pt" OnClick="deleteSelectedFromFirstTable"></asp:Button>
             <br>
-            <asp:TextBox runat="server" id="textBoxChangeQuantityFirst"></asp:TextBox>
-            <asp:Button runat="server" id="changeSelectedItemsQuantityFirst" Text="Zmień ilość zaznaczonych dań" ></asp:Button>
+            <asp:TextBox runat="server" id="textBoxChangeQuantityFirst" ></asp:TextBox>
+            <asp:Button runat="server" id="changeSelectedItemsQuantityFirst" Text="Zmień ilość zaznaczonych dań" Font-Size="10pt" OnClick="changeQuantitySelectedInFirstTable" ></asp:Button>
             <asp:ListBox runat="server" ID="lblDishesForFirstTable" SelectionMode="multiple"style="overflow-x:auto;" Font-Size="13pt" Width="360" Height="300" ></asp:ListBox> 
             <br>
             <asp:label runat="server"> Rachunek: </asp:label>
             <asp:label runat="server" id="firstBill">0.00zł</asp:label>
-            <asp:Button runat="server" id="payBillFirst" Text="Zapłać" Font-Size="16pt" > </asp:Button>
+            <asp:Button runat="server" id="payBillFirst" Text="Zapłać" Font-Size="16pt" OnClick="payForFirst" > </asp:Button>
         </div>
             
-        <div id="content" style="float: left; width:25%;margin-top:8%; margin-left:15% ">
+        <div id="content" style="float: left; width:25%;margin-top:3%; margin-left:15% ">
             <asp:label runat="server"> Stolik 2</asp:label>
-            <asp:Button runat="server" id="deleteSelectedItemsSecond" Text="Usuń zaznaczone dania" OnClick="deleteSelectedFromSecondTable"></asp:Button>
+            <asp:Button runat="server" id="deleteSelectedItemsSecond" Text="Usuń zaznaczone dania" Font-Size="24pt" OnClick="deleteSelectedFromSecondTable"></asp:Button>
             <br>
-            <asp:TextBox runat="server" id="textBoxChangeQuantitySecpmd"></asp:TextBox>
-            <asp:Button runat="server" id="changeSelectedItemsQuantitySecond" Text="Zmień ilość zaznaczonych dań" ></asp:Button>
+            <asp:TextBox runat="server" id="textBoxChangeQuantitySecond"></asp:TextBox>
+            <asp:Button runat="server" id="changeSelectedItemsQuantitySecond" Text="Zmień ilość zaznaczonych dań" Font-Size="10pt" OnClick="changeQuantitySelectedInSecondTable"></asp:Button>
       
             <asp:ListBox runat="server" ID="lblDishesForSecondTable" SelectionMode="multiple"style="overflow-x:auto;" Font-Size="13pt" Width="360" Height="300" ></asp:ListBox> 
             <br>
@@ -90,12 +87,12 @@
             <asp:Button runat="server" id="payBillSecond" Text="Zapłać" Font-Size="16pt" > </asp:Button>
         </div>    
             
-        <div id="content" style="float: left; width:25%;margin-top:8%; margin-left:15% ">
+        <div id="content" style="float: left; width:25%;margin-top:3%; margin-left:15% ">
             <asp:label runat="server"> Stolik 3</asp:label>
-            <asp:Button runat="server" id="deleteSelectedItemsThird" Text="Usuń zaznaczone dania" OnClick="deleteSelectedFromThirdTable"></asp:Button>
+            <asp:Button runat="server" id="deleteSelectedItemsThird" Text="Usuń zaznaczone dania" Font-Size="24pt" OnClick="deleteSelectedFromThirdTable"></asp:Button>
             <br>
             <asp:TextBox runat="server" id="textBoxChangeQuantityThird"></asp:TextBox>
-            <asp:Button runat="server" id="changeSelectedItemsQuantityThird" Text="Zmień ilość zaznaczonych dań" ></asp:Button>
+            <asp:Button runat="server" id="changeSelectedItemsQuantityThird" Text="Zmień ilość zaznaczonych dań" Font-Size="10pt" OnClick="changeQuantitySelectedInThirdTable"></asp:Button>
       
             <asp:ListBox runat="server" ID="lblDishesForThirdTable" SelectionMode="multiple"style="overflow-x:auto;" Font-Size="13pt" Width="360" Height="300" ></asp:ListBox> 
             <br>
@@ -104,12 +101,12 @@
             <asp:Button runat="server" id="payBillThird" Text="Zapłać" Font-Size="16pt" > </asp:Button>
         </div>
             
-        <div id="content" style="float: left; width:25%;margin-top:8%; margin-left:15% "> 
+        <div id="content" style="float: left; width:25%;margin-top:3%; margin-left:15% "> 
             <asp:label runat="server"> Stolik 4</asp:label>
-            <asp:Button runat="server" id="deleteSelectedItemsFourth" Text="Usuń zaznaczone dania" OnClick="deleteSelectedFromFourthTable"></asp:Button>
+            <asp:Button runat="server" id="deleteSelectedItemsFourth" Text="Usuń zaznaczone dania" Font-Size="24pt"  OnClick="deleteSelectedFromFourthTable"></asp:Button>
             <br>
             <asp:TextBox runat="server" id="textBoxChangeQuantityFourth"></asp:TextBox>
-            <asp:Button runat="server" id="changeSelectedItemsQuantityFourth" Text="Zmień ilość zaznaczonych dań" ></asp:Button>
+            <asp:Button runat="server" id="changeSelectedItemsQuantityFourth" Text="Zmień ilość zaznaczonych dań" Font-Size="10pt" OnClick="changeQuantitySelectedInFourthTable"></asp:Button>
       
             <asp:ListBox runat="server" ID="lblDishesForFourthTable" SelectionMode="multiple"style="overflow-x:auto;" Font-Size="13pt" Width="360" Height="300" ></asp:ListBox> 
             <br>
@@ -118,20 +115,19 @@
             <asp:Button runat="server" id="payBillFourth" Text="Zapłać" Font-Size="16pt" > </asp:Button>
         </div>  
             
-        <div id="content" style="float: left; width:25%;margin-top:8%; margin-left:15% ">
+        <div id="content" style="float: left; width:25%;margin-top:3%; margin-left:15% ">
             <asp:label runat="server"> Stolik 5</asp:label>
-            <asp:Button runat="server" id="deleteSelectedItemsFifth" Text="Usuń zaznaczone dania" OnClick="deleteSelectedFromFifthTable"></asp:Button>
+            <asp:Button runat="server" id="deleteSelectedItemsFifth" Text="Usuń zaznaczone dania" Font-Size="24pt" OnClick="deleteSelectedFromFifthTable"></asp:Button>
             <br>
             <asp:TextBox runat="server" id="textBoxChangeQuantityFifth"></asp:TextBox>
-            <asp:Button runat="server" id="changeSelectedItemsQuantityFifth" Text="Zmień ilość zaznaczonych dań" ></asp:Button>
+            <asp:Button runat="server" id="changeSelectedItemsQuantityFifth" Text="Zmień ilość zaznaczonych dań" Font-Size="10pt" OnClick="changeQuantitySelectedInFifthTable"></asp:Button>
       
             <asp:ListBox runat="server" ID="lblDishesForFifthTable" SelectionMode="multiple"style="overflow-x:auto;" Font-Size="13pt" Width="360" Height="300" ></asp:ListBox>        
             <br>
             <asp:label runat="server"> Rachunek: </asp:label>
             <asp:label runat="server" id="fifthBill">0.00zł</asp:label>
             <asp:Button runat="server" id="payBillFifth" Text="Zapłać" Font-Size="16pt" > </asp:Button>
-        </div>        
-        
+        </div> 
     </form>
         
         
