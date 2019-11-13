@@ -93,6 +93,15 @@ namespace ForWaiters {
 
         protected System.Web.UI.WebControls.Label fifthBill;
 
-        protected System.Web.UI.WebControls.Label quu;
+        protected System.Web.UI.WebControls.Label billFirstTxt;
+
+        protected System.Web.UI.WebControls.Label billSecondTxt;
+
+        protected System.Web.UI.WebControls.Label billThirdTxt;
+
+        protected System.Web.UI.WebControls.Label billFourthTxt;
+
+        protected System.Web.UI.WebControls.Label billFifthTxt;
+
     }
 }

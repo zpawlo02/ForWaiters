@@ -155,13 +155,13 @@ namespace ForWaiters
                     lblDishesForFirstTable.Items.Remove(listItem);
                 }
 
-                loadDisheshInView(0);
+                
             }
             catch
             {
 
             }
-            
+            loadDisheshInView(0);
 
         }
 
@@ -190,13 +190,13 @@ namespace ForWaiters
                     lblDishesForSecondTable.Items.Remove(listItem);
                 }
 
-                loadDisheshInView(1);
+                
             }
             catch
             {
 
             }
-            
+            loadDisheshInView(1);
         }
 
         public void deleteSelectedFromThirdTable(object sender, EventArgs args)
@@ -221,13 +221,13 @@ namespace ForWaiters
                 {
                     lblDishesForThirdTable.Items.Remove(listItem);
                 }
-                loadDisheshInView(2);
+                
             }
             catch
             {
 
             }
-            
+            loadDisheshInView(2);
         }
 
         public void deleteSelectedFromFourthTable(object sender, EventArgs args)
@@ -253,13 +253,13 @@ namespace ForWaiters
                 {
                     lblDishesForFourthTable.Items.Remove(listItem);
                 }
-                loadDisheshInView(3);
+                
             }
             catch
             {
 
             }
-            
+            loadDisheshInView(3);
         }
 
         public void deleteSelectedFromFifthTable(object sender, EventArgs args)
@@ -286,13 +286,13 @@ namespace ForWaiters
                 {
                     lblDishesForFifthTable.Items.Remove(listItem);
                 }
-                loadDisheshInView(4);
+                
             }
             catch
             {
 
             }
-            
+            loadDisheshInView(4);
         }
 
         public void changeQuantitySelectedInFirstTable(object sender, EventArgs args)
@@ -401,7 +401,7 @@ namespace ForWaiters
         }
         public void Messagebox(string xMessage)
         {
-            Response.Write("<script>confirm('" + xMessage + "')</script>");
+            Response.Write("<script>alert('" + xMessage + "')</script>");
         }
 
         public void payForFirst(object sender, EventArgs args)
@@ -409,16 +409,88 @@ namespace ForWaiters
             string message = "";
             foreach(ListItem item in lblDishesForFirstTable.Items)
             {
-                message += item.Text + "\\n";
+                message += item.Text + "<br />";
+          
 
             }
             
-             message += "\\n";
+             message += "<br />";
              message += "Napiwek 5%: " + (tablesList[0].getBil() * 0.05f / 100.0f).ToString();
-             message += "\\n";
+             message += "<br />";
              message += "Kwota do zapłacenia: " + ((tablesList[0].getBil() + (tablesList[0].getBil() * 0.05f)) / 100.0f).ToString();
-             
-            Messagebox(message);
+            
+            billFirstTxt.Text = message;
+        }
+
+        public void payForSecond(object sender, EventArgs args)
+        {
+            string message = "";
+            foreach (ListItem item in lblDishesForSecondTable.Items)
+            {
+                message += item.Text + "<br />";
+
+            }
+
+            message += "<br />";
+            message += "Napiwek 5%: " + (tablesList[1].getBil() * 0.05f / 100.0f).ToString();
+            message += "<br />";
+            message += "Kwota do zapłacenia: " + ((tablesList[1].getBil() + (tablesList[1].getBil() * 0.05f)) / 100.0f).ToString();
+
+            billSecondTxt.Text = message;
+
+        }
+
+        public void payForThird(object sender, EventArgs args)
+        {
+            string message = "";
+            foreach (ListItem item in lblDishesForThirdTable.Items)
+            {
+                message += item.Text + "<br />";
+
+            }
+
+            message += "<br />";
+            message += "Napiwek 5%: " + (tablesList[2].getBil() * 0.05f / 100.0f).ToString();
+            message += "<br />";
+            message += "Kwota do zapłacenia: " + ((tablesList[2].getBil() + (tablesList[2].getBil() * 0.05f)) / 100.0f).ToString();
+
+            billThirdTxt.Text = message;
+
+        }
+
+        public void payForFourth(object sender, EventArgs args)
+        {
+            string message = "";
+            foreach (ListItem item in lblDishesForFourthTable.Items)
+            {
+                message += item.Text + "<br />";
+
+            }
+
+            message += "<br />";
+            message += "Napiwek 5%: " + (tablesList[3].getBil() * 0.05f / 100.0f).ToString();
+            message += "<br />";
+            message += "Kwota do zapłacenia: " + ((tablesList[3].getBil() + (tablesList[3].getBil() * 0.05f)) / 100.0f).ToString();
+
+            billFourthTxt.Text = message;
+
+        }
+
+        public void payForFifth(object sender, EventArgs args)
+        {
+            string message = "";
+            foreach (ListItem item in lblDishesForFifthTable.Items)
+            {
+                message += item.Text + "<br />";
+
+            }
+
+            message += "<br />";
+            message += "Napiwek 5%: " + (tablesList[4].getBil() * 0.05f / 100.0f).ToString();
+            message += "<br />";
+            message += "Kwota do zapłacenia: " + ((tablesList[4].getBil() + (tablesList[4].getBil() * 0.05f)) / 100.0f).ToString();
+
+            billFifthTxt.Text = message;
 
         }
     }
